@@ -27,8 +27,9 @@ public class TowerBulder : MonoBehaviour
         spawnPosition.y += beam.transform.localScale.y;
 
         SpawnPlatform(_finishPlatform, ref spawnPosition, beam.transform);
+        SpawnPlatform(_spawnPlatform, ref spawnPosition, beam.transform);
 
-        for (int i = 0; i < _lievelCount; i++)
+        for (int i = 0; i < _lievelCount-1; i++)
         {
             SpawnPlatform(_massPlatforms[Random.Range(0, _massPlatforms.Length)], ref spawnPosition, beam.transform);
         }

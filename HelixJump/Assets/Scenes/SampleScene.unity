@@ -133,6 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 235952057}
   - component: {fileID: 235952056}
+  - component: {fileID: 235952059}
+  - component: {fileID: 235952058}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -154,9 +156,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lievelCount: 9
   _beam: {fileID: 5863355754178281093, guid: b9b657257847be749a50fff0e88a1dd5, type: 3}
-  _spawnPlatform: {fileID: -6758473265201018505, guid: f0e1df3ead5f01344b0c616dcdab29ec, type: 3}
+  _spawnPlatform: {fileID: 8622238631755479184, guid: 5bd659d59fb7aa640a1771a79038f7af, type: 3}
   _massPlatforms:
-  - {fileID: 672383096028404570, guid: 8c56f3152ba975c44ad33948680ac4d6, type: 3}
+  - {fileID: 2068374229083580091, guid: 8c56f3152ba975c44ad33948680ac4d6, type: 3}
   _finishPlatform: {fileID: 6776995877695986363, guid: f0e1df3ead5f01344b0c616dcdab29ec, type: 3}
 --- !u!4 &235952057
 Transform:
@@ -166,12 +168,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235952055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.851699, y: 20.180824, z: -13.16034}
+  m_LocalPosition: {x: -12.851699, y: 20.180824, z: -9.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &235952058
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235952055}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 94
+  m_CollisionDetection: 0
+--- !u!114 &235952059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235952055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5283cfd2d1b1a14b8cd544eea324d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotateSpeed: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
