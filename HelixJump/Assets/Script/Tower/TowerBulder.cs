@@ -13,7 +13,7 @@ public class TowerBulder : MonoBehaviour
     private float _startAndFinishAdditionalScale = 1f;
 
     public float BeamScaly => _lievelCount + _startAndFinishAdditionalScale;
-    private void Start()
+    private void Awake()
     {
         Build();
     }
@@ -29,7 +29,7 @@ public class TowerBulder : MonoBehaviour
         SpawnPlatform(_finishPlatform, ref spawnPosition, beam.transform);
         SpawnPlatform(_spawnPlatform, ref spawnPosition, beam.transform);
 
-        for (int i = 0; i < _lievelCount-1; i++)
+        for (int i = 0; i < _lievelCount-2; i++)
         {
             SpawnPlatform(_massPlatforms[Random.Range(0, _massPlatforms.Length)], ref spawnPosition, beam.transform);
         }
