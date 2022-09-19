@@ -40,7 +40,7 @@ public class BallTracker : MonoBehaviour
         Vector3 beamPosition  =  _ball.transform.position;
         beamPosition.y = _ball.transform.position.y;
         _cameraPosition = _ball.transform.position;
-        Vector3 direction = (_beam.transform.position-_ball.transform.position).normalized + _directionOffset;
+        Vector3 direction = (_ball.transform.position-_beam.transform.position).normalized + _directionOffset;
         _cameraPosition -= direction * _lenght;
         transform.position = _cameraPosition;
         transform.LookAt(_ball.transform);
